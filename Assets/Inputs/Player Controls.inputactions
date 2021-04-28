@@ -1,0 +1,166 @@
+{
+    "name": "Player Controls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "170831af-f6e8-4bf1-8ffb-1ee6635b9bd3",
+            "actions": [
+                {
+                    "name": "APressed",
+                    "type": "Button",
+                    "id": "59b58bc1-a0d9-466a-9c21-caa74bff5af5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "BPressed",
+                    "type": "Button",
+                    "id": "59c8f7d4-3741-405b-b510-2bf02aff0bda",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "XPressed",
+                    "type": "Button",
+                    "id": "55af0e90-4913-4a95-9c97-6ce76a927c7e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "YPressed",
+                    "type": "Button",
+                    "id": "8afbaaf2-3eb4-4b64-8756-e01aed6a4969",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "LTPressed",
+                    "type": "Button",
+                    "id": "4c9a80ba-70da-4fd3-a121-9832367385cf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RTPressed",
+                    "type": "Button",
+                    "id": "a19088ff-00a4-497f-bf29-aa177052e7ca",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "LBPressed",
+                    "type": "Button",
+                    "id": "743eecb2-49ac-4444-82f1-1f25c9caac9a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RBPressed",
+                    "type": "Button",
+                    "id": "3fd44c77-2378-4d34-9f09-9bc3bcd99db8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "26761cfc-2d37-4d92-a66c-03eceeb0b4af",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "APressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "63b3c63a-bdad-46be-a1f8-bb3cac64a957",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e906576-8924-4ff1-9aa3-c740363c3f8f",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "XPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e3b7a1e-010d-4cac-88c2-3922a3f3611f",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "YPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "15de9137-4449-4945-b6bd-70e1fea0d7ea",
+                    "path": "<XInputController>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LTPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "095a13e5-439a-4356-b30e-f0bed61d9d20",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LBPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6217bdff-ba9c-42a8-a2cb-8cab8cb991f2",
+                    "path": "<XInputController>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RBPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80ff92a6-04b1-4d55-bdc5-234f942a5dd4",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RTPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
