@@ -81,6 +81,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ARelease"",
+                    ""type"": ""Button"",
+                    ""id"": ""27f22a68-a22d-4113-8d7a-090579ba8b17"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -88,7 +96,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""26761cfc-2d37-4d92-a66c-03eceeb0b4af"",
                     ""path"": ""<XInputController>/buttonSouth"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""APressed"",
@@ -99,7 +107,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""63b3c63a-bdad-46be-a1f8-bb3cac64a957"",
                     ""path"": ""<XInputController>/buttonEast"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""BPressed"",
@@ -110,7 +118,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""2e906576-8924-4ff1-9aa3-c740363c3f8f"",
                     ""path"": ""<XInputController>/buttonWest"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""XPressed"",
@@ -121,7 +129,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""9e3b7a1e-010d-4cac-88c2-3922a3f3611f"",
                     ""path"": ""<XInputController>/buttonNorth"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""YPressed"",
@@ -143,7 +151,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""095a13e5-439a-4356-b30e-f0bed61d9d20"",
                     ""path"": ""<XInputController>/leftShoulder"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LBPressed"",
@@ -154,7 +162,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""6217bdff-ba9c-42a8-a2cb-8cab8cb991f2"",
                     ""path"": ""<XInputController>/rightShoulder"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RBPressed"",
@@ -169,6 +177,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RTPressed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""998a7177-9c01-4c94-a8d0-4359051b0f8e"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ARelease"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -187,6 +206,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_RTPressed = m_Gameplay.FindAction("RTPressed", throwIfNotFound: true);
         m_Gameplay_LBPressed = m_Gameplay.FindAction("LBPressed", throwIfNotFound: true);
         m_Gameplay_RBPressed = m_Gameplay.FindAction("RBPressed", throwIfNotFound: true);
+        m_Gameplay_ARelease = m_Gameplay.FindAction("ARelease", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -244,6 +264,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_RTPressed;
     private readonly InputAction m_Gameplay_LBPressed;
     private readonly InputAction m_Gameplay_RBPressed;
+    private readonly InputAction m_Gameplay_ARelease;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -256,6 +277,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @RTPressed => m_Wrapper.m_Gameplay_RTPressed;
         public InputAction @LBPressed => m_Wrapper.m_Gameplay_LBPressed;
         public InputAction @RBPressed => m_Wrapper.m_Gameplay_RBPressed;
+        public InputAction @ARelease => m_Wrapper.m_Gameplay_ARelease;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -289,6 +311,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @RBPressed.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRBPressed;
                 @RBPressed.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRBPressed;
                 @RBPressed.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRBPressed;
+                @ARelease.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnARelease;
+                @ARelease.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnARelease;
+                @ARelease.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnARelease;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -317,6 +342,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @RBPressed.started += instance.OnRBPressed;
                 @RBPressed.performed += instance.OnRBPressed;
                 @RBPressed.canceled += instance.OnRBPressed;
+                @ARelease.started += instance.OnARelease;
+                @ARelease.performed += instance.OnARelease;
+                @ARelease.canceled += instance.OnARelease;
             }
         }
     }
@@ -331,5 +359,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnRTPressed(InputAction.CallbackContext context);
         void OnLBPressed(InputAction.CallbackContext context);
         void OnRBPressed(InputAction.CallbackContext context);
+        void OnARelease(InputAction.CallbackContext context);
     }
 }

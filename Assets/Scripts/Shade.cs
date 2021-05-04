@@ -8,20 +8,24 @@ public class Shade : MonoBehaviour
 {
    PlayerControls controls;
 
+    public Animator AButtn;
+
     void Awake()
     {
        controls = new PlayerControls();
-       controls.Gameplay.APressed.performed += ctx => Aclick();
-      
+       controls.Gameplay.APressed.performed += ctx => APress();
+       controls.Gameplay.ARelease.performed += ctx => ARelease();
     }
 
-   void Aclick() 
+    void APress() 
     {
-        transform.localScale *= 1.1f;
-
+        AButtn.SetBool("Pressed", true);
     }
 
-
+    void ARelease()
+    {
+        AButtn.SetBool("Pressed", false);
+    }
 
     void OnEnable()
     {
@@ -29,7 +33,7 @@ public class Shade : MonoBehaviour
     }
 
     void OnDisable()
-   {
+    {
        controls.Gameplay.Disable();
     }
 }

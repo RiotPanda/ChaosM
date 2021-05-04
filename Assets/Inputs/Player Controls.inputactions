@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ARelease",
+                    "type": "Button",
+                    "id": "27f22a68-a22d-4113-8d7a-090579ba8b17",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -75,7 +83,7 @@
                     "name": "",
                     "id": "26761cfc-2d37-4d92-a66c-03eceeb0b4af",
                     "path": "<XInputController>/buttonSouth",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "APressed",
@@ -86,7 +94,7 @@
                     "name": "",
                     "id": "63b3c63a-bdad-46be-a1f8-bb3cac64a957",
                     "path": "<XInputController>/buttonEast",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "BPressed",
@@ -97,7 +105,7 @@
                     "name": "",
                     "id": "2e906576-8924-4ff1-9aa3-c740363c3f8f",
                     "path": "<XInputController>/buttonWest",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "XPressed",
@@ -108,7 +116,7 @@
                     "name": "",
                     "id": "9e3b7a1e-010d-4cac-88c2-3922a3f3611f",
                     "path": "<XInputController>/buttonNorth",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "YPressed",
@@ -130,7 +138,7 @@
                     "name": "",
                     "id": "095a13e5-439a-4356-b30e-f0bed61d9d20",
                     "path": "<XInputController>/leftShoulder",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "LBPressed",
@@ -141,7 +149,7 @@
                     "name": "",
                     "id": "6217bdff-ba9c-42a8-a2cb-8cab8cb991f2",
                     "path": "<XInputController>/rightShoulder",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "RBPressed",
@@ -156,6 +164,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "RTPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "998a7177-9c01-4c94-a8d0-4359051b0f8e",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ARelease",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
